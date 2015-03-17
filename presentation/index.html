@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Deployment i Skatteetaten</title>
+
+		<meta name="description" content="Deployment i Skatteetaten">
+		<meta name="author" content="Eivind Greibrokk">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Continuous Delivery</h2>
+					<p>
+						<img src="images/skatteetaten-logo-black.png" height="300">
+						<br>
+						<br>
+						<small>Created by <a href="http://greibrokk.no">Eivind Greibrokk</a></small>
+					</p>
+				    <aside class="notes">
+				        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+				    </aside>
+				</section>
+
+				<section>
+					<h2>SVG image</h2>
+					<p>
+						<!-- <object data="images/tegninger_til_presentasjon_om_deployment_i_skatt.svg" type="image/svg+xml"/> -->
+						<img src="images/tegninger_til_presentasjon_om_deployment_i_skatt.svg" height="300" border="0">
+					</p>
+				    <aside class="notes">
+				        Just an SVG image
+				    </aside>
+				</section>
+
+				<section>
+					<h2>PNG image</h2>
+					<p>
+						<img src="test/examples/assets/image2.png" height="400">
+					</p>
+				    <aside class="notes">
+				        Just an SVG image
+				    </aside>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						### ehi
+						 - 1
+						 - 2
+						 - 3
+
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Utrullingsscript - Bash og Python
+						## Virtuelle servere
+						### Opprinnelig KVM
+						### Nå konvergent infrastruktur på FlexPod
+						### Disk - NetApp
+						## Databasehotell
+
+						"Navnet er kanskje intetsigende, men A-meldingen er det største digitaliseringsprosjektet siden Altinn-portalen."
+						"Det er levert på tid og under budsjett."
+						[http://www.digi.no/bedriftsteknologi/2015/01/09/feirer-statlig-it-prosjekt]
+
+					</script>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
