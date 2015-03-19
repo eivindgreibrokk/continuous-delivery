@@ -46,19 +46,27 @@
 						<img src="images/skatteetaten-logo-black.png" height="300">
 						<br>
 						<br>
-						<small>Created by <a href="http://greibrokk.no">Eivind Greibrokk</a></small>
+						<small>Laget av <a href="http://greibrokk.no">Eivind Greibrokk</a></small>
 					</p>
 				    <aside class="notes">
-				        Jeg startet i MAG i 2011. Erik Mong var med fra starten i 2010??
+				    	Husk tiden!
 				    </aside>
 				</section>
 
 				<section>
-					<h2>Avbrytelser og interaksjon</h2>
-					<p>
+					<h2>MAG</h2>
+					<p class="fragment">
+						Modernisering av grunnlagsdata
+					</p>
+					<p class="fragment">
+						"Uberørt av menneskehender"
+					</p>
+					<p class="fragment">
 						Avbryt meg gjerne dersom du lurer på noe!
 					</p>
-				    <aside class="notes">Husk tiden!</aside>
+				    <aside class="notes">
+				        Mantra siden starten. Jeg startet i MAG i 2011. Erik Mong var med fra starten i 2010.
+				    </aside>
 				</section>
 
 				<section>
@@ -74,7 +82,7 @@
 						</ul>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Utviklet som en felles standard på tvers av prosjektene for hvordan ting skal rulles ut.
 				    </aside>
 				</section>
 
@@ -86,7 +94,7 @@
 						<img src="images/glassfish.jpg" height="150">
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        I starten var det Glassfish alt skulle kjøre på. Midlertidig avgjørelse som ble stående i noen år.
 				    </aside>
 				</section>
 
@@ -96,15 +104,18 @@
 						<img src="images/Glassfish-cluster.jpg" height="400">
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Ulempen med cluster er at man da har en avhengighet til andre servere. DAS må starte før clusterinstans på remote server. Dermed ble det ikke så lett å automatisere med Docker.
 				    </aside>
 				</section>
 
 				<section>
 					<h2>Scriptet gjenoppbygging</h2>
 					<p>
-						Fra 2011/2012
-						<br/>
+						<img src="images/terminal.png" height="100" class="fragment roll-in">
+						&nbsp;&nbsp;&nbsp;
+						<img src="images/construction_site.jpg" height="200" class="fragment roll-in">
+					</p>
+					<p>
 						<img src="images/terminal.png" height="100" class="fragment">
 						&nbsp;&nbsp;&nbsp;
 						<img src="images/demolition.jpg" height="200" class="fragment">
@@ -124,7 +135,7 @@
 						<img src="images/katalogstrukturForLeveransepakke.png" height="550">
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Applikasjonene kjenner kun til noen få kataloger relativt til der applikasjonen pakkes ut. Dette symblinkes tilbake til et felles share slik at alt av logger, dataområder og konfigurasjon beholdes etter utrulling av ny versjon.
 				    </aside>
 				</section>
 
@@ -134,7 +145,7 @@
 						<img src="images/liquibase.jpg">
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Liquibase vet hvilke script som er kjørt, og hvilke som skal kjøres.
 				    </aside>
 				</section>
 
@@ -144,7 +155,7 @@
 						<img src="images/webdeploy.jpg" height="550">
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Kun er webgrensesnitt over shellscriptene. Absolutt alle kan legge ut ny versjon. Foreslår versjonsnummer automatisk. Kan endre inputparametre. 
 				    </aside>
 				</section>
 
@@ -154,7 +165,7 @@
 						<img src="images/jenkins.png" height="550">
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Prosjektet ble etterhvert så stort at vi brukte opp all CPU for andre prosjekter. Har nå et cluster med en master og 6 byggslaver. Bygger og releaser automatisk. Releaser underprosjekter også.
 				    </aside>
 				</section>
 
@@ -186,11 +197,11 @@
 					<h2>Bash --> Python</h2>
 					<p>
 						<ul>
-							<li>Mer enn 10.000 kodelinjer med Bash ble uoversiktlig</li>
-							<li>Startet på nytt med Python</li>
-							<li>Denne gangen med enhetstester på deploykoden også</li>
-							<li>Releaser deploykoden også</li>
-							<li>Tenker PAAS:
+							<li class="fragment">Mer enn 10.000 kodelinjer med Bash ble uoversiktlig</li>
+							<li class="fragment">Startet på nytt med Python</li>
+							<li class="fragment">Denne gangen med enhetstester på deploykoden også</li>
+							<li class="fragment">Releaser deploykoden også</li>
+							<li class="fragment">Tenker PAAS:
 								<ul>
 									<li>Inject database</li>
 									<li>Inject storage</li>
@@ -200,7 +211,7 @@
 						</ul>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Husk tiden!
 				    </aside>
 				</section>
 
@@ -208,14 +219,14 @@
 					<h2>Konvergent infrastruktur (FlexPod)</h2>
 					<p>
 						<ul>
-							<li>Hardware, nettverk og disk i samme boks</li>
-							<li>Selvbetjeningsløsning for oppretting av miljøer</li>
-							<li>Fleksibelt</li>
-							<li>Rimeligere</li>
+							<li class="fragment">Hardware, nettverk og disk i samme boks</li>
+							<li class="fragment">Selvbetjeningsløsning for oppretting av miljøer</li>
+							<li class="fragment">Fleksibelt</li>
+							<li class="fragment">Rimeligere</li>
 						</ul>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Husk tiden!
 				    </aside>
 				</section>
 
@@ -223,12 +234,12 @@
 					<h2>Hurtigreleaser</h2>
 					<p>
 						<ul>
-							<li>Tidligere hadde vi hovedreleaser omtrent hver 2. måned</li>
-							<li>Vi har det siste halvåret benyttet hurtigreleaser 2-3 ganger per uke - i tillegg til hovedreleasene</li>
+							<li class="fragment">Tidligere hadde vi hovedreleaser omtrent hver 2. måned</li>
+							<li class="fragment">Vi har det siste halvåret benyttet hurtigreleaser 2-3 ganger per uke - i tillegg til hovedreleasene</li>
 						</ul>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Husk tiden!
 				    </aside>
 				</section>
 
@@ -240,7 +251,7 @@
 						</ul>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Vi kan selv bestille databaser og skjemaer. Dette skal benyttes som input til deploy slik at man får tildelt en database automatisk.
 				    </aside>
 				</section>
 
@@ -254,7 +265,7 @@
 						<a href="http://www.digi.no/bedriftsteknologi/2015/01/09/feirer-statlig-it-prosjekt">http://www.digi.no/bedriftsteknologi/2015/01/09/feirer-statlig-it-prosjekt</a>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				        Husk tiden!
 				    </aside>
 				</section>
 
@@ -262,20 +273,20 @@
 					<h2>Nåsituasjonen</h2>
 					<p>
 						<ul>
-							<li>Enhetstester og integrasjonstester ved commit</li>
-							<li>Sonar, Findbugs, Cobertura ved commit</li>
-							<li>Ende-til-ende-tester i akseptansetestmiljøet</li>
-							<li>Smoketester i akseptansetestmiljøet</li>
-							<li>Cucumbertester i akseptansetestmiljøet</li>
-							<li>Noe manuell testing i akseptansetestmiljøet</li>
-							<li>Ytelsestest i ytelsestesttestmiljøet</li>
-							<li>Webdeploy og avstemmingsfil ved prodsetting</li>
-							<li>Ser kun framover. Ruller (nesten) ikke tilbake. For mange eksterne avhengigheter</li>
-							<li><b>Ca. 3 produksjonssettinger per uke i 2015</b></li>
+							<li class="fragment">Enhetstester og integrasjonstester ved commit</li>
+							<li class="fragment">Sonar, Findbugs, Cobertura ved commit</li>
+							<li class="fragment">Ende-til-ende-tester i akseptansetestmiljøet</li>
+							<li class="fragment">Smoketester i akseptansetestmiljøet</li>
+							<li class="fragment">Cucumbertester i akseptansetestmiljøet</li>
+							<li class="fragment">Noe manuell testing i akseptansetestmiljøet</li>
+							<li class="fragment">Ytelsestest i ytelsestesttestmiljøet</li>
+							<li class="fragment">Webdeploy og avstemmingsfil ved prodsetting</li>
+							<li class="fragment">Ser kun framover. Ruller (nesten) ikke tilbake. For mange eksterne avhengigheter</li>
+							<li class="fragment"><b>Ca. 3 produksjonssettinger per uke i 2015</b></li>
 						</ul>
 					</p>
 				    <aside class="notes">
-				        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				    	Spørsmål?
 				    </aside>
 				</section>
 
